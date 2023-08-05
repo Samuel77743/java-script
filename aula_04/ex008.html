@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+
+<body>
+    <h1>Operadores Lógicos</h1>
+    <script>
+        document.write('<code> &&.......Conjunção(é TRUE quando todas comparações serem TRUE)<br></code>')
+        document.write('<code> ||.......Disjunção(é TRUE quando pelo menos uma comaparação ser TRUE)<br></code>')
+        document.write('<code> !.......Negação(Inverte a ordem da expressão que o procede)<br></code>')
+    </script>
+    <hr>
+    <h2>Expressões com operadores lógicos</h2>
+    <script>
+        var numero = 8
+        document.write("<p><strong>var numero = 8</strong></p>")
+        document.write(`<code>numero > 4 && numero < 10 --> ${(numero > 4 && numero < 10)}<br></code>`)
+        document.write(`<code>numero == 0 || numero == 8 --> ${numero == 0 || numero == 8}<br></code>`)
+        document.write(`<code>!(numero == 8) --> ${!(numero==8)}<br></code>`)
+
+    </script>
+</body>
+</html>

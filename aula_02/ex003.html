@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenação e Template String</title>
+</head>
+<body>
+    <h1>Concatenação</h1>
+    <script>
+        var nome = "Samuel", idade = 19, altura = 1.90
+
+        //Usando concatenação
+        var texto1 = "O aluno " + nome + " tem " + idade + " anos e " + altura + " de altura"
+
+        window.document.writeln(texto1)
+    </script>
+
+    <h1>Template String</h1>
+    <script>
+        //Usando Template String
+        var texto2 = `O aluno ${nome} tem ${idade} anos e ${altura} de altura`
+        window.document.writeln(texto2)
+
+    </script>
+    
+</body>
+</html>

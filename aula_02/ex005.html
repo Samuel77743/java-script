@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixar, substituir e formatar para R$</title>
+</head>
+<body>
+    <h1>Fixando quantidade de casas decimais</h1>
+    <script>
+        var num = 4.70
+        document.writeln("<p>Valor em questão >> " + num + "</p>")
+
+        num = num.toFixed(2) //Houve conversão automática para STRING neste processo
+        document.writeln("<p>Valor com casa fixada >> " + num + "</p>")
+    </script>
+
+    <h1>Substituindo caracteres</h1>
+    <script>
+        num = num.replace(".", ",")
+        document.writeln("<p>Substituindo \".\" por , >> " + num + "</p>")
+    </script>
+
+    <h1>Formatando para REAIS</h1>
+    <script>
+        num = 4.70
+        document.write(num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+        //A formatação de Contábil só funciona se o dado for Number
+    </script>
+</body>
+</html>

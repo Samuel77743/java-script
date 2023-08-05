@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+body {
+    background-color: rgb(84, 137, 161);
+}
+
+p, h1, h2, h3 {
+    font-family: 'Franklin Gothic', sans-serif;
+    font-size: 28px;
+}
+
+code {
+    font-size: 28px;
+}
