@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<body>
+    <h1>Iniciando estudos com <strong>DOM(Document Object Model)</strong></h1>
+    <p>O DOM é um conjunto hierárquico de objetos componentes dos elementos que um navegador elabora em determinado site. Ou seja existem elementos pais e filhos, sendo o objeto "window" o raiz.</p>
+    <p>Com pleno conhecimento do DOM, é possível selecionar tags, e manipular conteúdos.</p>
+
+    <h2>Tipos de seleção</h2>
+
+    <ol>
+        <li>por MARCA</li>
+        <p>Elemento manipulado por MARCA</p>
+
+        <li>por ID</li>
+        <p>Elemento manipulado por ID</p>
+
+        <li>por NOME</li>
+        <p>Elemento manipulado por NOME</p>
+
+        <li>por CLASSE</li>
+        <p>Elemento manipulado por CLASSE</p>
+
+        <li>por SELEÇÃO</li>
+        <p>Elemento manipulado por SELEÇÃO</p>
+    </ol>
+
+    <script>
+        //Por marcação        
+        var paragrafo = window.document.getElementsByTagName('p')[2]
+            
+        paragrafo.style.color = 'green'
+        window.document.write(`POR MARCA: ${paragrafo.innerHTML}`)
+    </script>
+    
+</body>
+</html>
