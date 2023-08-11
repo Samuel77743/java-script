@@ -15,27 +15,58 @@
 
     <ol>
         <li>por MARCA</li>
-        <p>Elemento manipulado por MARCA</p>
+        <p>Elemento <strong>manipulado</strong> por MARCA</p>
 
         <li>por ID</li>
-        <p>Elemento manipulado por ID</p>
+        <p id="p2">Elemento manipulado por ID</p>
 
         <li>por NOME</li>
-        <p>Elemento manipulado por NOME</p>
+        <p name="p3">Elemento manipulado por NOME</p>
 
         <li>por CLASSE</li>
-        <p>Elemento manipulado por CLASSE</p>
+        <p class="p4">Elemento manipulado por CLASSE</p>
+        <p class="p4"> 2º Elemento manipulado por CLASSE</p>
 
         <li>por SELEÇÃO</li>
-        <p>Elemento manipulado por SELEÇÃO</p>
+        <p id="p5" class="p5">Elemento manipulado por SELEÇÃO</p>
     </ol>
 
     <script>
         //Por marcação        
         var paragrafo = window.document.getElementsByTagName('p')[2]
-            
+        var lista = window.document.getElementsByTagName('li')[0]
+
         paragrafo.style.color = 'green'
+        lista.style.color = 'blue'
         window.document.write(`POR MARCA: ${paragrafo.innerHTML}`)
+
+        //Por ID
+        var paragrafo2 = window.document.getElementById ('p2')
+        paragrafo2.style.color = 'purple'
+        paragrafo2.style.backgroundColor = 'black'
+
+        window.document.write(`<br>POR ID: ${paragrafo2.innerHTML}`)
+
+        //Por nome
+        var paragrafo3 = window.document.getElementsByName('p3')[0]
+        paragrafo3.style.backgroundColor = 'pink'
+        window.document.write(`<br>POR NOME: ${paragrafo3.innerText}`)
+
+        //Por Classe
+        var paragrafo4 = window.document.getElementsByClassName('p4')[0]
+        var paragrafo4_1 = window.document.getElementsByClassName('p4')[1]
+        paragrafo4.style.backgroundColor = 'red'
+        paragrafo4_1.style.backgroundColor = 'red'
+
+        window.document.write(`<br>POR CLASS: ${(paragrafo4.innerText + ' & ' + paragrafo4_1.innerText)}`)
+
+        //Por seleção
+        var paragrafo5class = window.document.querySelector('p.p5')
+        var paragrafo5id = window.document.querySelector('p#p5')
+        
+        paragrafo5class.style.backgroundColor = 'white'
+        paragrafo5id.style.color = 'green'
+
     </script>
     
 </body>
