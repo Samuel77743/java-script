@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interações direto no JS</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+
+    <style>
+        div {
+            font: bold 20pt Arial;
+            color: yellow;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interações diretas no JS</h1>
+    <div>
+        Interaja
+    </div>
+    
+    <script>
+        var a = window.document.getElementsByTagName('div')[0]
+        //Código que permitirá que seja executado funções a partir de uma ação de mouse do user
+        a.addEventListener('click', clicou)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function clicou() {
+            a.innerHTML = "<strong>CLICOU</strong>"
+            a.style.color = "blue"
+            a.style.backgroundColor = "yellow"
+        }
+
+        function entrou() {
+            a.innerHTML = "<strong>ENTROU</strong>"
+        }
+
+        function saiu() {
+            a.innerHTML = "<en>Saiu<en>"
+            a.style.color = "yellow"
+            a.style.backgroundColor = "blue"
+        }
+
+
+    </script>
+</body>
+</html>

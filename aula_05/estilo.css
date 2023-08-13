@@ -1,0 +1,9 @@
+
+body{
+    font: bold 14pt Arial
+}
+
+#botao:hover{
+    border-radius: 6px;
+    cursor: pointer ;
+}

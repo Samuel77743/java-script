@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividindo Valores</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Dividindo valores</h1>
+    <input type="number" name="txt1" id="txt1">
+    /
+    <input type="number" name="txt2" id="txt2">
+    
+    <input id="botao" type="button" value="Dividir" onclick="dividir()" >
+
+    <div id="resultado">Resultado:</div>
+
+    <script>
+        function dividir() {
+            var txt1 = window.document.getElementById('txt1')
+            var txt2 = window.document.getElementById('txt2')
+            var resposta = Number(txt1.value) / Number(txt2.value)
+            var resultado = window.document.getElementById('resultado')
+            resultado.innerHTML = `Resultado: ${resposta.toFixed(2)}`
+        }
+    </script>
+
+</body>
+
+</html>

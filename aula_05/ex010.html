@@ -3,71 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>Interações DOM</title>
     <link rel="stylesheet" href="../estilo/style.css">
+
+    <style>
+        div {
+            font: bold 20pt Arial;
+            color: red;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Iniciando estudos com <strong>DOM(Document Object Model)</strong></h1>
-    <p>O DOM é um conjunto hierárquico de objetos componentes dos elementos que um navegador elabora em determinado site. Ou seja existem elementos pais e filhos, sendo o objeto "window" o raiz.</p>
-    <p>Com pleno conhecimento do DOM, é possível selecionar tags, e manipular conteúdos.</p>
-
-    <h2>Tipos de seleção</h2>
-
-    <ol>
-        <li>por MARCA</li>
-        <p>Elemento <strong>manipulado</strong> por MARCA</p>
-
-        <li>por ID</li>
-        <p id="p2">Elemento manipulado por ID</p>
-
-        <li>por NOME</li>
-        <p name="p3">Elemento manipulado por NOME</p>
-
-        <li>por CLASSE</li>
-        <p class="p4">Elemento manipulado por CLASSE</p>
-        <p class="p4"> 2º Elemento manipulado por CLASSE</p>
-
-        <li>por SELEÇÃO</li>
-        <p id="p5" class="p5">Elemento manipulado por SELEÇÃO</p>
-    </ol>
+    <div id="interaja" onclick="usuarioClicou()" onmouseenter="entrar()" onmouseout="saiu()">
+        Interaja...
+    </div>
 
     <script>
-        //Por marcação        
-        var paragrafo = window.document.getElementsByTagName('p')[2]
-        var lista = window.document.getElementsByTagName('li')[0]
+        var interaja = window.document.getElementById('interaja')
 
-        paragrafo.style.color = 'green'
-        lista.style.color = 'blue'
-        window.document.write(`POR MARCA: ${paragrafo.innerHTML}`)
+        function usuarioClicou() {
+            interaja.innerHTML = 'Usuário <strong>clicou</strong>'
+            interaja.style.backgroundColor = 'red'
+            interaja.style.color = 'green'
+        }
 
-        //Por ID
-        var paragrafo2 = window.document.getElementById ('p2')
-        paragrafo2.style.color = 'purple'
-        paragrafo2.style.backgroundColor = 'black'
+        function entrar() {
+            interaja.style.backgroundColor = 'green'
+            interaja.style.color = 'red'
+            interaja.innerText = 'Entrou'
+        }
 
-        window.document.write(`<br>POR ID: ${paragrafo2.innerHTML}`)
-
-        //Por nome
-        var paragrafo3 = window.document.getElementsByName('p3')[0]
-        paragrafo3.style.backgroundColor = 'pink'
-        window.document.write(`<br>POR NOME: ${paragrafo3.innerText}`)
-
-        //Por Classe
-        var paragrafo4 = window.document.getElementsByClassName('p4')[0]
-        var paragrafo4_1 = window.document.getElementsByClassName('p4')[1]
-        paragrafo4.style.backgroundColor = 'red'
-        paragrafo4_1.style.backgroundColor = 'red'
-
-        window.document.write(`<br>POR CLASS: ${(paragrafo4.innerText + ' & ' + paragrafo4_1.innerText)}`)
-
-        //Por seleção
-        var paragrafo5class = window.document.querySelector('p.p5')
-        var paragrafo5id = window.document.querySelector('p#p5')
-        
-        paragrafo5class.style.backgroundColor = 'white'
-        paragrafo5id.style.color = 'green'
-
+        function saiu() {
+            interaja.style.backgroundColor = 'green'
+            interaja.style.color = 'red'
+            interaja.innerText = 'Saiu'
+        }
     </script>
-    
 </body>
 </html>
