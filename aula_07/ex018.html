@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Multas</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro
+    <input type="number" id="velocidade">
+    <input id="botao" type="button" value="Verificar">    
+
+    <script>
+        document.getElementById('botao').addEventListener('click', clicou)
+
+        function clicou() {
+            var n1 = Number(document.getElementById('velocidade').value)
+            console.log(typeof(n1))
+            if (n1 >= 60){
+                window.alert("Velocidade excedida, multado")
+            }
+            else {
+                window.alert("Velocidade adequada =)")
+            }
+        }
+    </script>
+</body>
+</html>

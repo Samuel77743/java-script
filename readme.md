@@ -16,4 +16,6 @@ STATUS: 🚧 Em construção...  🚧
 
 - **Aula 05:** Interação de acordo com comportamento do mouse
 
-- **Aula 06** Sites para operação de: *dSoma, Divisão, Subtração e Multiplicação*
+- **Aula 06** Sites para operação de: *Soma, Divisão, Subtração e Multiplicação*
+
+- **Aula 07** Condições *IFs, ELSE-IFs, Switch* 

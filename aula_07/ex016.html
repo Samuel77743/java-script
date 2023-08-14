@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<body>
+    
+    <div style="text-align: center;">
+        <input type="button" id="botao" value="Baixar Logan">
+    </div>
+
+    <script>
+        var clicar = document.getElementById('botao')
+        clicar.addEventListener('click', baixar)
+
+        function baixar() {
+            var link = 'magnet:?xt=urn:btih:ef30ab4cf8ab1ec1f9968755d52e6f50b1fb7657'
+            var popup = window.confirm(`Link do filme: ${link}`)
+
+            if(popup === true) {
+                window.open(link, '_blank')
+            }
+
+
+
+        }
+    </script>
+</body>
+</html>

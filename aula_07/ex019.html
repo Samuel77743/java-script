@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Digite seu país de natal:
+    <input type="text" id="resposta">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="resultado">
+        Resultado: 
+    </div>
+
+    <script>
+        function verificar(){
+            var resp = (document.getElementById('resposta').value).toUpperCase()
+            console.log('resp')
+
+            var resultado = document.getElementById('resultado')
+
+            if(resp === "BRASIL") {
+                resultado.innerHTML = "<strong>RESULTADO: Brasileiro</strong>"           
+            }
+            else if(resp === "ESTADOS UNIDOS") {
+                resultado.innerHTML = '<strong>RESULTADO: Estadunidense</strong>'
+            }
+            else if(resp === "PORTUGAL") {
+                resultado.innerHTML = '<strong>RESULTADO: Português</strong>'
+            }
+            else {
+                resultado.innerHTML = '<strong>RESULTADO: Estrangeiro</strong>'
+            }
+        }
+    </script>
+    
+</body>
+</html>
