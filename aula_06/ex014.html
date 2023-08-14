@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtração</title>
+</head>
+<body>
+    <h1>Operação de Subtração</h1>
+
+    <input type="number" id="n1">
+    -
+    <input type="number" id="n2">
+    <input type="button" id="botao" value="Calcular">
+    <div id="resultado">
+        <strong>Resultado:</strong>
+    </div>
+
+    <script>
+        var botao = document.getElementById('botao')
+        botao.addEventListener('click', clicou)
+
+        function clicou(){
+            var n1 = Number((document.getElementById('n1')).value)
+            var n2 = Number((document.getElementById('n2')).value)
+            var resultado = document.getElementsByTagName('div')[0]
+            resultado.innerHTML = `<strong>Resultado: ${n1-n2}</strong>`
+        }
+    </script>
+</body>
+</html> 

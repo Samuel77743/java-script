@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação de Multiplicação</title>
+</head>
+<body>
+    <h1>Multiplicação</h1>
+    <input type="number" id="num1">
+    <strong> X </strong>
+    <input type="number" id="num2">
+    <input type="button" value="Calcular">
+    
+    <div id="resultado"><strong>Resultado:</strong></div>
+
+    <script>
+        var botao = document.getElementsByTagName('input')[2]
+        botao.addEventListener('click', multiplicar)
+
+        function multiplicar(){
+            var n1 = Number(document.getElementById('num1').value)
+            var n2 = Number(document.getElementById('num2').value)
+            document.getElementById('resultado').innerHTML = `<strong>Resultado: ${n1*n2}</strong>`
+        }
+
+    </script>
+</body>
+</html>

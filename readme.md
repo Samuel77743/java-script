@@ -12,4 +12,8 @@ STATUS: 🚧 Em construção...  🚧
 
 - **Aula 03:** Operadores Aritméticos e de Atribuição
 
-- **Aula 04:** 
+- **Aula 04:** Operadores Relacionais, Lógicos e Ternários
+
+- **Aula 05:** Interação de acordo com comportamento do mouse
+
+- **Aula 06** Sites para operação de: *dSoma, Divisão, Subtração e Multiplicação*
